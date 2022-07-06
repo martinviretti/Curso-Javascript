@@ -1,0 +1,39 @@
+
+/* Palette color */
+
+.background-primary   { background-color : #181818}
+.card-footer-color { background-color :#212121 }
+.text-nav   { color: #7575758f; }
+.h3-h3-textbutton-color   { color: #9E9E9E; }
+.button-color         { background-color : #181818 }
+.background-cards    { color: #fbc12dd8 }
+
+ /* font familys */
+
+
+ .font-family-primary {font-family: sans-serif;}
+ .font-family-secondary {font-family: sans-serif;}
+
+*{
+    margin:10px;
+    box-sizing: border-box;
+    padding: 0px;
+    font-family: ;
+}
+
+body{
+background-color: #181818;
+}
+h1{
+    color:#7575758f;
+}
+h3{
+    color: #b6b3b3;
+}
+header{
+background-color: #212121;
+}
+
+header{
+    background-color: #fbc12db8 ;
+}
