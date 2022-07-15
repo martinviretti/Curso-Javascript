@@ -1,8 +1,9 @@
 // Ejemplo 2
+ 
 
-let txt = prompt("Escriba un nombre: ")
-while( txt !== "ESC"){
-txt = prompt("Escriba un nombre: ")
-alert(txt += " " + "eres" + " " + " Genial")
-
-}
+let nombre = prompt("Ingrese un nombre")
+let esc = "ESC"
+ while(nombre !== esc ){
+   alert(nombre + " Buenos Dias .")
+   nombre = prompt("Ingrese un nombre")
+ }
