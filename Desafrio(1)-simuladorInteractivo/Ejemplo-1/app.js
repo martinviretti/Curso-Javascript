@@ -1,25 +1,38 @@
-
-const p1 = "Porducto 1  valor "+ " " + "$"+ 400
-const p2 = "Porducto 2  valor "+ " " + "$"+ 200
-const p3 = "Porducto 3  valor "+ " " + "$"+ 300
-const p4 = "Porducto 4  valor "+ " " + "$"+ 100
-const p5 = "Porducto 5  valor "+ " " + "$"+ 50
-const p6 = "Porducto 6  valor "+ " " + "$"+ 25
+let MontoDeterminado = parseInt(prompt("Ingese el total de compra :"))
 
 
-let CantidadDeProductos = prompt("Indique la cantidad de productos que desea comprar:")
-
-let productosSeleccionados = []
-
-for(i = 0 ; i >= CantidadDeProductos ; i++){
-     let PreguntaProducto = prompt("Ingrese el primer producto que desea :")
-     if(PreguntaProducto == p1 || p2 || p3 || p4 || p5 || p6){
-        productosSeleccionados.push(PreguntaProducto)
-     }
+while(isNaN(MontoDeterminado) || MontoDeterminado <= 0 ){
+    MontoDeterminado = ParseInt(prompt(" No ingreso un Monto valido, Ingrse el total de compra:"))
 }
 
-alert(productosSeleccionados)
+let CantidadDeCuotas = parseInt(prompt("Cantidad de cuotas :"))
+
+while(isNaN(CantidadDeCuotas) || CantidadDeCuotas <= 0){
+    CantidadDeCuotas = ParseInt(prompt(" No ingreso una cantidad de cuotas valida, Ingrse nuevamente:"))
+}
 
 
 
+function CalcularCuotas (MontoDeterminado,CantidadDeCuotas){
+    if (CantidadDeCuotas > 0 && CantidadDeCuotas<= 5)
+    {
+       let total = ( " su cuota seria de :" + ( (MontoDeterminado / CantidadDeCuotas) * 1.25))
+       return total
+    }
+    else if(CantidadDeCuotas > 5 && CantidadDeCuotas < 12)
+    {
+       let total = ( " su cuota seria de :" +  ( (MontoDeterminado / CantidadDeCuotas) * 1.40))
+       return total
 
+    }
+    else ( CantidadDeCuotas >= 12)
+    {
+        let total = ( " su cuota seria de :" +  ( (MontoDeterminado / CantidadDeCuotas) * 1.60))
+         return total
+    }
+
+}
+
+
+
+alert(CalcularCuotas(MontoDeterminado,CantidadDeCuotas))
