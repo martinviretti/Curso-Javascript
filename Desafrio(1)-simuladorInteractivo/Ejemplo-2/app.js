@@ -54,3 +54,4 @@ function CalcularResultadoTotal (MontoApagar,descuento,impuestos){
 }
 
 
+// cuando pongo un descuento invalido me entra en el bucle while y aunque ponga un descuento bien no sale 

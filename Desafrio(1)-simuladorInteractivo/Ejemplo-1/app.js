@@ -1,8 +1,8 @@
 let MontoDeterminado = parseInt(prompt("Ingese el total de compra :"))
 
 
-while(isNaN(MontoDeterminado) || MontoDeterminado <= 0 ){
-    MontoDeterminado = ParseInt(prompt(" No ingreso un Monto valido, Ingrse el total de compra:"))
+while(isNaN(MontoDeterminado) || MontoDeterminado <= 0 ||MontoDeterminado === " " ){
+  MontoDeterminado = ParseInt(prompt(" No ingreso un Monto valido, Ingrse el total de compra:"))
 }
 
 let CantidadDeCuotas = parseInt(prompt("Cantidad de cuotas :"))
