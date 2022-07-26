@@ -21,7 +21,7 @@ let MontoDeterminado = Producto1 + Producto2 + Producto3 + Producto4
 
 let CantidadDeCuotas = parseInt(prompt("Cantidad de cuotas :"))
 
-while(isNaN(CantidadDeCuotas) || CantidadDeCuotas <= 0){
+while(isNaN(CantidadDeCuotas) || CantidadDeCuotas <= 0 || CantidadDeCuotas == ""){
     CantidadDeCuotas = ParseInt(prompt(" No ingreso una cantidad de cuotas valida, Ingrse nuevamente:"))
 }
 
@@ -30,20 +30,21 @@ while(isNaN(CantidadDeCuotas) || CantidadDeCuotas <= 0){
 function CalcularCuotas (MontoDeterminado,CantidadDeCuotas){
     if (CantidadDeCuotas > 0 && CantidadDeCuotas<= 5)
     {
-       let total = ( " Su cuota tiene un 25% de interes y  el monto es :" + ( (MontoDeterminado / CantidadDeCuotas) * 1.25))
+       let total = ( "El total de su compra es"  + " " + "$" + MontoDeterminado  + " " + "Su cuota tiene un 25% de interes y  el monto es :" + " " +   "$" +  ( (MontoDeterminado / CantidadDeCuotas) * 1.25))
        return total
     }
     else if(CantidadDeCuotas > 5 && CantidadDeCuotas < 12)
     {
-       let total = ( " Su cuota tiene un 40% de interes y  el monto es :" +  ( (MontoDeterminado / CantidadDeCuotas) * 1.40))
+       let total = ( "El total de su compra es"  + " " + "$" + MontoDeterminado  + " " +" Su cuota tiene un 40% de interes y  el monto es :" + " " +   "$" +   ( (MontoDeterminado / CantidadDeCuotas) * 1.40))
        return total
 
     }
     else ( CantidadDeCuotas >= 12)
     {
-        let total = ( " Su cuota tiene un 60% de interes y  el monto es :"+ " " + " " +  ( (MontoDeterminado / CantidadDeCuotas) * 1.60))
+        let total = ( "El total de su compra es"  + " " + "$" + MontoDeterminado  + " " + " Su cuota tiene un 60% de interes y  el monto es: " + " " +   "$" +  ( (MontoDeterminado / CantidadDeCuotas) * 1.60))
          return total
     }
+
 
 }
 
