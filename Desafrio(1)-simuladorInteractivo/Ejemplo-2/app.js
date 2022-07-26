@@ -9,32 +9,39 @@ while(MontoApagar == " " || isNaN(MontoApagar)){
 
 let descuento = parseInt(prompt("Ingrse su descuento:" + " 25% , 35% o 50% " ))
 
-let impuestos = 1.15
+let impuestos = 1.21
 
  if(descuento === 25){
-    descuento = 1.25
+    descuento = 0.75
 
 }else if(descuento === 35){
-    descuento = 1.35
+    descuento = 0.65
 
 }else if(descuento === 50){
-    descuento = 1.50
+    descuento = 0.50
 
 }else  while(descuento !== 25 || descuento !== 35 || descuento !== 50 || descuento === " " || isNaN(descuento)){
         descuento = parseInt(prompt("ingrse un descueno valido : "))
         
-        if(descuento === 25){
-            descuento = 1.25
-        
-        }else if(descuento === 35){
-            descuento = 1.35
-        
-        }else if(descuento === 50){
-            descuento = 1.50
-        }else{
+        if(isNaN(descuento)){  
+            
+            if(descuento == 25){
+            descuento = 0.75
             continue
-        } 
+        }else if(descuento == 35){ 
+            descuento = 0.65
+            continue
+            ;
+        }else(descuento == 50) ;{
+            
+            descuento = 0.50
+            continue
+     
+    }
 
+
+
+      
 
 
         }
@@ -48,7 +55,7 @@ let impuestos = 1.15
 
 function CalcularResultadoTotal (MontoApagar,descuento,impuestos){
    
-  let  montFinal = (MontoApagar / descuento ) * impuestos 
+  let  montFinal = (MontoApagar * descuento ) * impuestos 
 
     return montFinal 
 }
