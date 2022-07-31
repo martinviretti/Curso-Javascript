@@ -177,7 +177,63 @@ nav ul li{
    color: white;
 }
 
+/* section img doble dwn */
 
+.container-img-dwn{
+display: flex;
+flex-direction: row nowrap;
+justify-content: center;
+
+
+}
+
+
+.div-img-dwn{
+    position: relative;
+    margin:10px;
+    
+}
+
+.div-img-dwn h2{
+    position: absolute;
+    top: 141px;
+    left: 216px;
+    z-index:1;
+    font-size: 40px;
+  }
+
+.img-dwn{
+     width: 600px;
+     object-position: center;
+     opacity: 0.5;
+     transition: 0.9s ease-in-out;
+     
+    
+}
+
+.img-dwn:hover {
+    opacity: 0.8;
+    scale:1.2;
+    transition: 0.9s ease-in-out;
+    z-index:2;
+  
+}
+
+.div-img-dwn h2{
+    
+    color:#fbc12dd8;
+}
+
+@media (max-width:800px){
+    .container-img-dwn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        
+        }
+}
+/* footer code */
 .container-footer{
     background-color :#212121;
     display: flex;
@@ -189,7 +245,14 @@ nav ul li{
     font-weight:300;
 
 }
-
+.container-footer h4{
+    color:antiquewhite;
+    margin-bottom: 20px;
+}
+.container-footer p{
+    font-weight: 500;
+    font-size:14px;
+}
 .container-footer1{
     display: flex;
     justify-content: space-between;
@@ -201,4 +264,173 @@ nav ul li{
     display: flex;
     justify-content: space-evenly  ;
     width: 50%;
+}
+
+ .icon-social{
+    color:#212121 ;
+    margin:1px;
+    margin-top:10px;
+
+    padding: 12px;
+    background-color:#fbc12dd8;
+    border-radius: 50%;
+    
+}
+.icon-social2{
+    color:#212121 ;
+    margin:4px;
+    width: 37px;
+    height: 37px;
+    padding: 12px;
+    background-color:#fbc12dd8;
+    border-radius: 50%;
+}
+
+
+.icon-social2:hover{
+    cursor: pointer;
+    color:wheat;
+}
+.icon-social:hover{
+    cursor: pointer;
+    color:wheat;
+}
+
+@media (max-width:800px){
+   
+}
+
+/* modal carrito  */
+
+#boton-carrito {
+   
+    transition: all .3s;
+}
+#boton-carrito:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: rgb(242, 236, 225);
+}
+#boton-carrito:focus {
+    outline: none;
+}
+
+#contenedor-productos {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+p {
+    line-height: 1.8;
+}
+.producto {
+    max-width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.precioProducto {
+    font-weight: 700;
+}
+.boton-agregar {
+    background-color: royalblue;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+    border: none;
+}
+.boton-agregar:hover {
+    cursor: pointer;
+}
+.boton-agregar:focus {
+    outline: none;
+}
+
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-carrito {
+    position: relative;
+    background-color: #2f2d2d;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+    margin-top: 0;
+}
+
+.modal-carrito h3 {
+    color: #fbc12dd8;
+    padding-bottom: 5px;
+}
+.modal-carrito #carritoCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: royalblue;
+    border: none;
+    background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+    outline: none;
+}
+.modal-carrito .precioProducto {
+    padding-top: 10px;
+    color:rgba(250, 235, 215, 0.701);
+    
+}
+
+.productoEnCarrito {
+    border-left: 5px solid lightblue;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.productoEnCarrito:hover {
+    border-left: 5px solid royalblue;
+}
+
+.boton-eliminar {
+    background-color: #2f2d2d;
+    color: #fbc12dd8;
+    border: none;
+    font-size: 20px;
+}
+
+.boton-eliminar:hover {
+    cursor: pointer;
+    color: antiquewhite;
+}
+.boton-eliminar:focus {
+    outline: none;
 }
