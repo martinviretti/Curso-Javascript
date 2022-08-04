@@ -24,6 +24,7 @@
     font-family: 'Rubik', sans-serif;
 }
 
+
 body{
 background-color: #181818;
 
@@ -113,7 +114,44 @@ nav ul li{
     font-size: 20px ;
     cursor: pointer;
 }
+nav ul li a{
+    list-style-type: none;
+    text-decoration: none;
+    color:#7575758f ;
+    font-weight: 400;
+    font-size: 20px ;
+    cursor: pointer;
+}
+/* carrusel container */
+.container-carrusel{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        position: relative;
+        overflow: hidden;
+}
+.container-carrusel div img {
+        width: 450px;
+        height: 390px;
+        filter: drop-shadow(12);
+    
 
+}
+.container-carrusel div h2  {
+    position: absolute;
+    top:30px;
+    
+}
+.container-carrusel div h3{
+    position: absolute;
+    top:60px 
+}
+.container-carrusel div button{
+    position: absolute;
+    top:100px;
+}
 
 /* Section Generic items */
 
@@ -180,9 +218,9 @@ nav ul li{
 /* section img doble dwn */
 
 .container-img-dwn{
-display: flex;
-flex-direction: row nowrap;
-justify-content: center;
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
 
 
 }
