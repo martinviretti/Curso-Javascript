@@ -122,6 +122,10 @@ nav ul li a{
     font-size: 20px ;
     cursor: pointer;
 }
+nav ul li a:hover{
+    color:#f5deb39d;
+    border-bottom: 1px solid #f5deb39d ;
+}
 /* carrusel container */
 .container-carrusel{
         width: 100%;
