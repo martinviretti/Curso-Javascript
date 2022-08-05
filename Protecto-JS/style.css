@@ -287,6 +287,7 @@ nav ul li a:hover{
     font-weight:300;
 
 }
+
 .container-footer h4{
     color:antiquewhite;
     margin-bottom: 20px;
@@ -342,7 +343,215 @@ nav ul li a:hover{
    
 }
 
-/* modal carrito  */
+
+/* formulario */
+
+.formulario{
+    background-color:#212121 ;
+    width: 50%;
+    border-radius: 10px;
+    height: 100%;
+    margin: auto;
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.69);
+}
+.formulario h1{
+    text-align: center;
+    margin-bottom:12px;
+    color: rgba(255, 255, 255, 0.517);
+    font-weight: 500;
+    font-family: 'Rock Salt', cursive;
+
+}
+
+.formulario hr{
+    height: 10px solid;
+    color: #181818;
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px;
+    box-sizing: border-box;
+}
+
+/* formulario messenger */
+
+ .messenger{
+    position: relative;
+    
+    margin:30px 0px auto;
+}
+
+.messenger input{
+    width: 100%;
+    padding: 0px 5px;
+    height: 100px;
+    font-size: 16px;
+    border: none;
+    background:none;
+    outline: none;
+    color:#2f2d2d;
+    background-color: rgba(255, 255, 255, 0.517);
+    border-radius: 10px;
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.69);
+}
+
+.messenger label{
+    position: absolute;
+    left: 5px;
+    color:#fbc12dd8;
+    transform: translateY(-110%);
+    font-size: 16px;
+    pointer-events: none;
+    font-weight: 300;
+    transition: .5s;
+    font-family: 'Rock Salt', cursive;
+    
+    
+}
+
+
+
+/* formulario username */
+
+form .username{
+    position: relative;
+    border-bottom:2px solid rgba(245, 222, 179, 0.459) ;
+    margin:30px 0px ;
+}
+.username input{
+    width: 100%;
+    padding: 0px 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background:none;
+    outline: none;
+    color:aliceblue
+}
+.username label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    color:#fbc12d88;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    font-weight: 300;
+    transition: .5s;
+    font-family: 'Rock Salt', cursive;
+    
+}
+.username span::before{
+    content: "";
+    position:absolute;
+    top:40px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #2f2d2d;
+}
+.username input:focus ~ label,
+.username input:focus ~ label{
+    top:-5px;
+    color:#fbc12dd8;
+}
+.username input:focus ~ span::before,
+.username input:focus ~ span::before{
+    width: 100%;
+}
+
+/* formulario email */
+
+
+
+form .email{
+    position: relative;
+    border-bottom:2px solid rgba(245, 222, 179, 0.459) ;
+    margin:30px 0px ;
+}
+.email input{
+    width: 100%;
+    padding: 0px 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background:none;
+    outline: none;
+    color:aliceblue
+}
+
+.email label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    color:#181818;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    font-weight: 300;
+    color:#fbc12d88;
+    font-family: 'Rock Salt', cursive;
+    
+}
+.email span::before{
+    content: "";
+    position:absolute;
+    top:40px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #2f2d2d;
+}
+.email input:focus ~ label,
+.email input:focus ~ label{
+    top:-5px;
+    color:#fbc12dd8;
+}
+.email input:focus ~ span::before,
+.email input:focus ~ span::before{
+    width: 100%;
+}
+
+/* boton formulario */
+
+.formulario button{
+ margin-bottom: 30px;
+ margin-top: 10px;
+ padding: 10px;
+ background:#fbc12dd8;
+ border: none;
+ border-radius: 10px;
+ cursor: pointer;
+ color:#212121;
+ font-weight: 500;
+ font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modal carrito  */
 
 #boton-carrito {
    
