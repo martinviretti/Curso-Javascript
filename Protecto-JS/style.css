@@ -232,20 +232,25 @@ nav ul li a:hover {
 .card {
     width: 220px;
     height: 300px;
-    background: #fbc12dd8;
+    background: #e8b83ee3;
     margin-top: 20px;
+    border-radius: 5px;
 }
 
-.card h4 {
+.h4 {
     text-align: center;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 500;
     color: #212121;
 }
 
 .img-card {
     width: 220px;
-    height: 220px
+    height: 220px;
+
+}
+.img-card2{
+    opacity: 0.4;
 }
 
 .container-txt {
@@ -255,9 +260,10 @@ nav ul li a:hover {
     margin: 15px;
 }
 
-.container-txt p {
-    font-weight: 600;
+.precio{
+    font-weight: 500;
     color: #212121;
+  
 }
 
 .container-txt button {

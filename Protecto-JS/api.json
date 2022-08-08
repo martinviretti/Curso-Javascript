@@ -1,0 +1,26 @@
+[
+    {
+        "imgUrl": "images/bober/Bobber VT600.jpg",
+        "id": 1,
+        "nombre": "bober1",
+        "precio": 300
+    },
+    {
+        "imgUrl": "images/bober/Bobber VT600.jpg",
+        "id": 2,
+        "nombre": "bober2",
+        "precio": 400
+    },
+    {
+        "imgUrl": "images/bober/Bobber VT600.jpg",
+        "id": 3,
+        "nombre": "bober3",
+        "precio": 500
+    },
+    {
+        "imgUrl": "images/bober/Bobber VT600.jpg",
+        "id": 4,
+        "nombre": "bober4",
+        "precio": 600
+    }
+]
