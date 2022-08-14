@@ -143,6 +143,13 @@
 
 const containerBober = document.querySelector('.bober-container')
 const templateCardBober = document.getElementById('template-card-bober').content
+const templateTotalCarrito = document.getElementById('template-total-carrito').content
+const tempalteProductoCarrito = document.getElementById('template-carrito').content
+const productoCarrito = document.querySelector('.carrito')
+const totalCarrito = document.querySelector('.total-carrito')
+
+const footerTemplate = document.getElementById('template-total-carrito').content
+const footer = document.getElementById('footer')
 const fragment = document.createDocumentFragment()
 let carrito = {}
 
@@ -179,24 +186,69 @@ const addCarrito = e => {
     // console.log(e.target)
     // console.log(e.target.classList.contains('button'))
     if (e.target.classList.contains('button')) {
-     setCarrito(e.target.parentElement.parentElement)
+        setCarrito(e.target.parentElement.parentElement)
     }
     e.stopPropagation()
 
 }
 
 const setCarrito = objeto => {
-console.log(objeto)
-const producto = {
-    id:objeto.querySelector('.button').dataset.id,
-    nombre:objeto.querySelector('h4').textContent,
-    precio:objeto.querySelector('p').textContent,
-    cantidad: 1
-}
-if (carrito.hasOwnProperty(producto.id)) {
-    producto.cantidad = carrito[producto.id].cantidad + 1
+
+    const producto = {
+        id: objeto.querySelector('.button').dataset.id,
+        nombre: objeto.querySelector('h4').textContent,
+        precio: objeto.querySelector('p').textContent,
+        cantidad: 1
+    }
+    if (carrito.hasOwnProperty(producto.id)) {
+        producto.cantidad = carrito[producto.id].cantidad + 1
+
+    }
+    carrito[producto.id] = { ...producto }
+    pintarCarrito()
 
 }
-carrito[producto.id] = {...producto}
-console.log(carrito)
+
+const pintarCarrito = () => {
+    totalCarrito.innerHTML = ''
+    // console.log(carrito)
+    Object.values(carrito).forEach(producto => {
+        tempalteProductoCarrito.querySelector('.producto-nombre-carrito').textContent = producto.nombre
+        tempalteProductoCarrito.querySelector('.cantidad-producto-carrito').textContent = producto.cantidad
+        // botones
+        tempalteProductoCarrito.querySelector('.btn-aumentar').dataset.id = producto.id
+        tempalteProductoCarrito.querySelector('.btn-disminuir').dataset.id = producto.id
+
+        tempalteProductoCarrito.querySelector('.precio-producto-carrito').textContent = producto.cantidad * producto.precio
+
+        const clone = tempalteProductoCarrito.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    productoCarrito.appendChild(fragment)
+
+    pintarFooter()
+}
+
+const pintarFooter = () => {
+    footer.innerHTML = ''
+
+
+    if (Object.keys(carrito).length === 0) {
+        footer.innerHTML = `
+
+        <h3>Carrito vacio</h3>
+        `
+        return
+    }
+    //  sumar cantidad y totales
+    const nCantidad = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)
+    const nPrecio = Object.values(carrito).reduce((acc, { cantidad, precio }) => acc + cantidad * precio, 0)
+    console.log(nPrecio)
+    footerTemplate.querySelector('.cantidad-productos').textContent = nCantidad
+    footerTemplate.querySelector('.total-fin').textContent = nPrecio
+
+    const clone = footerTemplate.cloneNode(true)
+    fragment.appendChild(clone)
+    footer.appendChild(fragment)
+
 }

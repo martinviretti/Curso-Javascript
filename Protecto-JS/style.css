@@ -347,10 +347,9 @@ margin-right:530px;
     font-size: 18px;
     margin-bottom: 2px;
 }
-.producto div input{
-    width:40px;
-}
+
 .producto div{
+    border-radius: 30px;
     display: flex;
     align-items: center;
     width: 100px;
@@ -358,12 +357,58 @@ margin-right:530px;
     margin-right: 60px;
     margin-left: 30px;
 }
+.producto .basket-quitar{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-right: 60px;
+    margin-left: 30px;
+    color: wheat;
+    font-size:20px;
+    font-weight: 700;
+    color:#e8b83ee3;
+    cursor: pointer;
+}
+.basket-quitar:hover{
+    scale:1.1;
+}
 
+.btn-aumentar ,.btn-disminuir{
+    color:rgba(255, 0, 0, 0.782);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    font-size: 19px;
+    padding: 3px;
+    margin: 2px;
+    cursor: pointer;
+}
+.btn-aumentar:hover ,.btn-disminuir:hover{
+    scale: 1.1;
+}
+
+.btn-aumentar {
+       margin-left: 15px;
+       color:rgba(0, 128, 0, 0.781);
+}
+.carrito-vacio{
+    background-color: #2f2d2d;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    color: wheat;
+    font-family: 'Rock Salt', cursive;
+    font-weight: 300;
+}
+.carrito-vacio h3{
+    font-family: 'Rock Salt', cursive;
+    box-shadow: 4px 14px 4px 14px solid black;
+}
 .total-carrito{
     width:100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     margin-top: 10px;
  
@@ -372,10 +417,40 @@ margin-right:530px;
     color: #757575e2;
     margin-left:5px;
 }
+.total-carrito h4{
+    color: #757575e2;
+    margin-left:5px;
+    text-align: center;
+    margin:3px;
+    
+}
 .total-carrito p{
     color: #757575e2;
     margin:0px;
 }
+
+
+.btn-vaciar-carrito{
+background: rgba(255, 0, 0, 0.782);
+border: none;
+padding: 4px 10px;
+color:#d5c7c7;
+font-size: 16px;
+font-weight: 500;
+border-radius: 5px;
+
+cursor: pointer;
+outline: none;
+}
+
+.btn-vaciar-carrito:hover{
+    scale: 1.1;
+    border: none;
+}
+
+
+
+
 /* section imgen moto  doble dwn */
 
 .container-img-dwn {
