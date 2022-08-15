@@ -143,13 +143,17 @@
 
 const containerBober = document.querySelector('.bober-container')
 const templateCardBober = document.getElementById('template-card-bober').content
+
+
+
+
 const templateTotalCarrito = document.getElementById('template-total-carrito').content
 const tempalteProductoCarrito = document.getElementById('template-carrito').content
 const productoCarrito = document.querySelector('.carrito')
 const totalCarrito = document.querySelector('.total-carrito')
 
 const footerTemplate = document.getElementById('template-total-carrito').content
-const footer = document.getElementById('footer')
+const footer = document.getElementById('carrito-vacio')
 const fragment = document.createDocumentFragment()
 let carrito = {}
 
@@ -159,6 +163,13 @@ document.addEventListener('DOMContentLoaded', () => {
 containerBober.addEventListener('click', e => {
     addCarrito(e)
 })
+
+
+totalCarrito.addEventListener('click',e =>{
+    btnAction(e)
+})
+
+
 const fechData = async () => {
     try {
         const res = await fetch('api.json')
@@ -210,7 +221,7 @@ const setCarrito = objeto => {
 }
 
 const pintarCarrito = () => {
-    totalCarrito.innerHTML = ''
+    totalCarrito.innerHTML = ""
     // console.log(carrito)
     Object.values(carrito).forEach(producto => {
         tempalteProductoCarrito.querySelector('.producto-nombre-carrito').textContent = producto.nombre
@@ -230,20 +241,22 @@ const pintarCarrito = () => {
 }
 
 const pintarFooter = () => {
-    footer.innerHTML = ''
+    footer.innerHTML = ""
 
 
     if (Object.keys(carrito).length === 0) {
         footer.innerHTML = `
 
-        <h3>Carrito vacio</h3>
+        <div class="carrito-vacio">
+             
+           <h3>Carrito vacio</h3>
+        </div>
         `
         return
     }
     //  sumar cantidad y totales
     const nCantidad = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)
     const nPrecio = Object.values(carrito).reduce((acc, { cantidad, precio }) => acc + cantidad * precio, 0)
-    console.log(nPrecio)
     footerTemplate.querySelector('.cantidad-productos').textContent = nCantidad
     footerTemplate.querySelector('.total-fin').textContent = nPrecio
 
@@ -251,4 +264,16 @@ const pintarFooter = () => {
     fragment.appendChild(clone)
     footer.appendChild(fragment)
 
+    const vaciarCarrito = document.querySelector('.btn-vaciar-carrito')
+    vaciarCarrito.addEventListener('click', () => {
+        carrito.Object = {}
+        pintarCarrito()
+    })
+
+  
+
 }
+
+
+const btnAccion = e =>{
+    console.log(e.target) }
