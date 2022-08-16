@@ -840,7 +840,7 @@ form .email {
 
 
 /* Modal carrito  */
-/* 
+
 #boton-carrito {
    
     transition: all .3s;
@@ -972,4 +972,4 @@ p {
 }
 .boton-eliminar:focus {
     outline: none;
-} */
+} 

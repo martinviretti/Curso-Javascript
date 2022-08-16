@@ -153,6 +153,8 @@ const productoCarrito = document.querySelector('.carrito')
 const totalCarrito = document.querySelector('.total-carrito')
 
 const footerTemplate = document.getElementById('template-total-carrito').content
+
+
 const footer = document.getElementById('carrito-vacio')
 const fragment = document.createDocumentFragment()
 let carrito = {}
@@ -241,7 +243,7 @@ const pintarCarrito = () => {
 }
 
 const pintarFooter = () => {
-    footer.innerHTML = ""
+    // footer.innerHTML = ""
 
 
     if (Object.keys(carrito).length === 0) {
