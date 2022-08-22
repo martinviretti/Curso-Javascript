@@ -38,6 +38,20 @@ const setTarea = e => {
 
     formulario.reset()
     e.target.querySelector('input').focus()
+    Toastify({
+        text: "Tarea agregada",
+        duration: 1000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "#11115af0",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
 }
 
 const pintarTareas = () => {
@@ -70,6 +84,8 @@ const pintarTareas = () => {
         fragment.appendChild(clone)
     })
     listaTareas.appendChild(fragment)
+
+    
 }
 
 const btnAccion = e => {
@@ -77,17 +93,46 @@ const btnAccion = e => {
     if (e.target.classList.contains('fa-check-circle')) {
         tareas[e.target.dataset.id].estado = true
         pintarTareas()
+        Toastify({
+            text: "Tarea realizada",
+            duration: 1000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "bottom", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "linear-gradient(to right, #96c93d)",
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
     }
 
     if (e.target.classList.contains('fa-minus-circle')) {
         // console.log(e.target.dataset.id)
         delete tareas[e.target.dataset.id]
         pintarTareas()
+        Toastify({
+            text: "Tarea quitada",
+            duration: 1000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "bottom", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "#ff0000da",
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
     }
 
     if (e.target.classList.contains('fa-undo-alt')) {
         tareas[e.target.dataset.id].estado = false
         pintarTareas()
+        
     }
 
     e.stopPropagation()
